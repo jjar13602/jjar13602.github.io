@@ -1,10 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+<head> 
+	<title>Pizza Ordering Form </title> 
+</head>	
+
+<body>
             <a href="../index.html">Return to Assignment Selection</a>
 			
+<header> 
+	<h1> Pizza Ordering Form</h1>
+</header>
+	<h2>Contact Information</h2>
+	<form>
+		<label for="inName">Name: </label>
+		<input type="text" name="inName" id="inName" required><br>
+		<label for="inPhone">Phone: </label>
+		<input type="tel" name="inPhone" id="inPhone" maxlength="10" required><br>
+		<label for="inEmail">Email: </label>
+		<input type="email" name="inEmail" id="inEmail" required>
+<h2>Select Pizza Size</h2>
+		<label for="pizzaSize">Pizza Size: </label>
+		<select name="pizzaSize" id="pizzaSize">
+			<option disabled selected>--Select Size--</option>
+			<option>Medium</option>
+			<option>Large</option>
+			<option>X-Large</option>
+		</select>
+<h2>Select Sauce</h2>
+		<input type="radio" id="marinara" name="sauce" required>
+			<label for="marinara">Marinara</label><br>
+		<input type="radio" id="ranch" name="sauce">
+			<label for="ranch">Ranch</label><br>
+		<input type="radio" id="noSauce" name="sauce">
+			<label for="noSauce" >No Sauce</label>
+
+<h2>Select Toppings</h2>
+
+		<input type="checkbox" id="pepperoni" name="toppings">
+			<label for="pepperoni">Pepperoni</label>
+		<input type="checkbox" id="sausage" name="toppings">
+			<label for="sausage">Sausage</label><br>
+		<input type="checkbox" id="anchovies" name="toppings">
+			<label for="anchovies">Anchovies</label>
+		<input type="checkbox" id="meatLovers" name="toppings">
+			<label for="meatLovers">Meat Lovers</label><br>
+		<input type="checkbox" id="veggies" name="toppings">
+			<label for="veggies">Veggies</label>
+		<input type="checkbox" id="pineapple" name="toppings">
+			<label for="pineapple">Pineapple</label>
+
+<h2>Additional Instructions</h2>
+		<textarea name="comments" placeholder="Add Instructions"></textarea><br>
+		<input type="submit" value="Submit">
+	</form>
+	<br>
+	
+	
+	
+
+<table border= "1">
+	<caption> List of my Favorite Games</caption>
+		<tr>
+			<th>Developer</th>
+			<th> Title</th>
+			<th> Year</th>
+		</tr>
+		<tr>
+			<td>Epic Games</td>
+			<td> Fortnite</td>
+			<td>2017</td>			
+		</tr>
+		<tr>
+			<td rowspan="2">Nintendo</td>
+			<td> Animal Crossing: New Horizons</td>
+			<td>2020</td>			
+		</tr>
+		<tr>
+			<td>Super Smash Bros Ultimate</td>
+			<td>2018</td>
+		</tr>
+		<tr>
+			<td colspan="3">Count: 3</td>
+		</tr>
+	</table>
 <footer>
     <p>© 2026 Jeremy Rodriguez</p>
 </footer>
 
-
+</body>
 </html>
