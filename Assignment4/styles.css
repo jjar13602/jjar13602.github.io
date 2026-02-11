@@ -1,0 +1,156 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+#jumpMenu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 10em;
+    background-color: yellow;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#jumpMenu a, #jumpMenu h2{
+    padding: .9em 0;
+    /*
+    flex: 1;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    padding: 10px; 
+    */
+
+}
+#jumpMenu a{
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+body{
+    margin-left: 10em;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    overflow: hidden;
+    background-color: red;
+    text-align: center;
+    font-size: 35px;
+}    
+
+header nav{
+    background-color: black;
+    display: flex;
+    padding-left: .34em;
+    padding-right: .34em;
+    gap: 0.5em;
+}
+
+header nav button{
+    flex: 1 1;
+    font-size: 0.9em;
+    color:white;
+    border: 1px solid black;
+    background-color: blue;
+    height: 2em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+header nav button:hover{
+    background-color: darkblue;
+}
+
+h1{
+    text-align: center;
+    font-size: 3em;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    gap: 1em;
+    padding: 1em;
+    text-align: justify;
+    max-width: calc(4 * 300px + 3 * 1em);
+    margin: 0 auto;
+}
+#container h1{
+    text-align: justify;
+}
+
+#container article{
+    width: 300px;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+#thanks{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+
+    background-color: lightblue;
+    color: black;
+    padding: .5em;
+    font-size: 2.5em;
+    z-index: 1000;
+
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 2 em 1 em;
+    text-align: center;
+}
+
+footer p, 
+footer address{
+   margin: 0;
+}
+
+footer p{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 0.75em;
+}
+
+footer address{
+    font-style: normal;
+}
+
+footer address div{
+    font-size:1.3em;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 3em;
+    row-gap: 0.6em;
+   
+    justify-content: center;
+    justify-items: start;
+}
+
+footer address span{
+    font-weight: bold;
+}
+
+footer address a,
+footer address span:nth-child(even){
+    font-weight: normal;
+}
+
+
+footer address div{
+    text-align: center;
+}
+
