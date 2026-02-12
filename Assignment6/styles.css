@@ -1,0 +1,94 @@
+ html, body{
+    margin: 0;
+    padding: 0;
+}
+@media(max-width: 412px) {
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media(min-width: 1920px) {
+    header{
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+}
+
+
+html {
+    background-color: skyblue;
+}
+
+header {
+    top: 0;
+    width: 100%;
+    border: 1px solid black;
+    position: sticky;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: skyblue;
+    padding: 1.25rem 2.5rem;
+}
+
+.name {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end;
+}
+
+.contact-top {
+    display: flex;
+    gap: 2rem;}
+
+.linkedin {
+    margin-top: 0.5rem;
+}
+
+
+nav{
+    text-align: center;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+}
+
+.objective, .education, .experience{
+    text-align: center;
+
+}
+.objective h2, .education h2, .experience h2{
+    text-align: left;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 2em 1em;
+    text-align: center;
+    margin: 0;
+}
+
+footer p{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 0.75em;
+}
