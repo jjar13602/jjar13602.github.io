@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 @media(max-width: 412px) {
     header{
         flex-direction: column;
@@ -15,7 +16,6 @@
         margin: 0 auto;
     }
 }
-
 
 html {
     background-color: skyblue;
