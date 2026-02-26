@@ -87,6 +87,11 @@
                 return;
             }
 
+            if (team.length >= 6){
+                alert('Your team is full! Please remove a Pokemon before adding another.');
+                return;
+            }
+
             const moves = selectedMoves.filter(move => move !== null);
 
             if (moves.length === 0) {
