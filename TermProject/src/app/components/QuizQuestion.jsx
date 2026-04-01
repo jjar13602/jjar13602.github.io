@@ -5,35 +5,15 @@ import { RadioGroup, RadioGroupItem } from './ui/radio-group';
 import { Label } from './ui/label';
 import { CheckCircle2, XCircle, Code2 } from 'lucide-react';
 
-export interface Question {
-  id: number;
-  type: 'multiple-choice' | 'code-body';
-  question: string;
-  code?: string;
-  options: string[];
-  correctAnswer: string;
-  explanation: string;
-  difficulty: 'easy' | 'medium' | 'hard';
-}
-
-interface QuizQuestionProps {
-  question: Question;
-  questionNumber: number;
-  totalQuestions: number;
-  onAnswer: (isCorrect: boolean, answer: string) => void;
-  showAnswer: boolean;
-}
-
 export function QuizQuestion({
   question,
   questionNumber,
   totalQuestions,
   onAnswer,
   showAnswer,
-}: QuizQuestionProps) {
-  const [selectedAnswer, setSelectedAnswer] = useState<string>('');
+}) {
+  const [selectedAnswer, setSelectedAnswer] = useState('');
 
-  // TODO (Person 2 — Attempts): POST /api/attempts with selected answer before calling onAnswer
   const handleSubmit = () => {
     const isCorrect = selectedAnswer === question.correctAnswer;
     onAnswer(isCorrect, selectedAnswer);

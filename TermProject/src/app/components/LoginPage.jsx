@@ -5,20 +5,13 @@ import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Code2, UserCircle } from 'lucide-react';
 
-interface LoginPageProps {
-  onLogin: (userData: { firstName: string; lastName: string; email: string }) => void;
-}
-
-export function LoginPage({ onLogin }: LoginPageProps) {
-  // Keeping these here because they drive error display in the UI
+export function LoginPage({ onLogin }) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [errors, setErrors] = useState({ firstName: '', lastName: '', email: '' });
 
-  // TEMP: basic front-end validation only for UX testing
-  // TODO (Person 3 — Auth): Replace with real POST /api/auth/login + JWT handling
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const newErrors = { firstName: '', lastName: '', email: '' };
@@ -42,7 +35,6 @@ export function LoginPage({ onLogin }: LoginPageProps) {
 
     setErrors(newErrors);
 
-    // TEMP: pass user data through so the rest of the app renders for UX testing
     if (isValid) {
       onLogin({ firstName, lastName, email });
     }

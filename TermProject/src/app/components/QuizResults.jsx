@@ -3,14 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import { Progress } from './ui/progress';
 import { Trophy, Target, BookOpen, RotateCcw, Sparkles } from 'lucide-react';
 
-interface QuizResultsProps {
-  score: number;
-  totalQuestions: number;
-  xpGained: number;
-  onRestart: () => void;
-}
-
-export function QuizResults({ score, totalQuestions, xpGained, onRestart }: QuizResultsProps) {
+export function QuizResults({ score, totalQuestions, xpGained, onRestart }) {
   const percentage = Math.round((score / totalQuestions) * 100);
 
   const getGrade = () => {
