@@ -3,13 +3,9 @@ import { Progress } from './ui/progress';
 import { Badge } from './ui/badge';
 import { Trophy, Star, Target, Award, TrendingUp } from 'lucide-react';
 import { calculateLevel } from '../utils/userProgress';
-import type { UserData } from '../utils/userProgress';
 
-interface UserProfileProps {
-  userData: UserData;
-}
 
-export function UserProfile({ userData }: UserProfileProps) {
+export function UserProfile({ userData }) {
   const levelInfo = calculateLevel(userData.xp);
   const accuracy =
     userData.totalQuestionsAnswered > 0

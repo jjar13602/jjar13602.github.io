@@ -7,23 +7,19 @@ import { Button } from './components/ui/button';
 import { Code2, BookOpen, PlayCircle, LogOut } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card';
 import { calculateXPGain } from './utils/userProgress';
-import type { UserData } from './utils/userProgress';
 
-// Placeholder question count for UI — replace with real data from API (Person 2)
 const QUESTION_COUNT = 10;
 
 export default function App() {
-  // UI state — drives which screen is shown
-  const [userData, setUserData] = useState<UserData | null>(null);
+
+  const [userData, setUserData] = useState(null);
   const [quizStarted, setQuizStarted] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [quizCompleted, setQuizCompleted] = useState(false);
 
-  // TEMP: sets dummy user data locally so UX can be tested end-to-end
-  // TODO (Person 3 — Auth): Replace with real POST /api/auth/login + JWT storage
-  const handleLogin = (loginData: { firstName: string; lastName: string; email: string }) => {
+  const handleLogin = (loginData) => {
     setUserData({
       firstName: loginData.firstName,
       lastName: loginData.lastName,
@@ -37,7 +33,6 @@ export default function App() {
     });
   };
 
-  // TODO (Person 3 — Auth): Call logout endpoint, clear JWT
   const handleLogout = () => {
     setUserData(null);
     setQuizStarted(false);
@@ -47,14 +42,12 @@ export default function App() {
     setQuizCompleted(false);
   };
 
-  // TEMP: tracks score locally for UX testing
-  // TODO (Person 2 — Attempts): POST /api/attempts with answer data
-  const handleAnswer = (isCorrect: boolean, _answer: string) => {
+  const handleAnswer = (isCorrect, _answer) => {
     setShowAnswer(true);
     if (isCorrect) setScore(prev => prev + 1);
   };
 
-  // TODO (Person 2 — Attempts): Tie into attempt logging; update score locally for now
+
   const handleNextQuestion = () => {
     if (currentQuestionIndex < QUESTION_COUNT - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
